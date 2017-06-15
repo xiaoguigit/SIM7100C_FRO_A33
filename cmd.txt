@@ -1,0 +1,13 @@
+adb push rild /system/bin/
+adb shell chmod 777 /system/bin/rild
+adb push init.gprs-pppd /etc/
+adb push 3gdata_call.conf /etc/
+adb shell chmod 777 /etc/init.gprs-pppd
+Adb push chat /system/bin/
+Adb shell chmod 777 /system/bin/chat
+adb push apns-conf.xml /etc/
+adb shell rm -rf /data/data/com.android.providers.telephony/databases/telephony.db
+adb push libreference-ril.so /system/lib/
+adb push libril.so /system/lib/
+adb push build.prop /system/
+adb shell chmod 644 /system/build.prop
